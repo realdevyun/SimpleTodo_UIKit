@@ -26,7 +26,7 @@ class TodoViewModel {
     
     func fetchData() -> AnyPublisher<[Todo], Error> {
         Future<[Todo], Error> { promise in
-            let descriptor = FetchDescriptor<Todo>(sortBy: [SortDescriptor<Todo>(\.date)])
+            let descriptor = FetchDescriptor<Todo>(sortBy: [SortDescriptor<Todo>(\.date/* John: 여기에 이거 써주시면 날짜빠른순으로 정렬돼요 , order: .reverse*/)])
             guard let ctx = self.context else {
                 print("context nil error")
                 return

@@ -22,6 +22,7 @@ class EditTodoView: UIViewController {
         return tf
     }()
     
+    // John: edit 버튼을 따로 구현하기보다는 pushViewController를 활용하면 더 좋았을꺼 같아요
     var editButton: UIBarButtonItem!
     
     let todoViewModel = TodoViewModel()
